@@ -874,8 +874,8 @@ input::placeholder {
     color: #514040;
 }
 
-@media (max-width:1080px),
-    (max-width:400px) {
+@media (max-width:1024px),
+    (max-width:480px) {
 
         nav .nav-first {
             display: none;
