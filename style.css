@@ -163,6 +163,7 @@ nav {
     line-height: 21px;
     color: #514040;
     margin-right: 6px;
+    text-decoration: none;
 }
 
 .nav-third {
@@ -893,8 +894,12 @@ input::placeholder {
            
         }
 
+        .secondHeader {
+            flex-wrap: wrap;
+        }
+
         .secondHeader img {
-            width: 70%;
+            width: 100%;
             margin-bottom: 40px;
         }
 
@@ -905,17 +910,34 @@ input::placeholder {
         .mainThird .mainInnerThird {
             display: flex;
             justify-content: center;
+            width: 100%;
         }
 
         .mainThird .mainInnerThird .inner {
+            text-align: center;
             width: 100%;
         }
 
         .mainThird .mainInnerThird .inner1 {
             width: 100%;
+            text-align: center;
+        }
+
+        .inner1 .innerImage {
+            display: flex;
+            justify-content: center;
+        }
+
+        .inner .innerImage {
+            display: flex;
+            justify-content: center;
         }
 
         .fourHeader .innerHeader {
+            width: 100%;
+        }
+
+        .mainFour .mainInnerFour {
             width: 100%;
         }
 
@@ -942,7 +964,8 @@ input::placeholder {
         }
 
         .mainFive .innerFive .inner {
-            width: 90%;
+            width: 100%;
+            text-align: center;
         }
 
         .sixHeader .innerHeader {
@@ -981,6 +1004,18 @@ input::placeholder {
             justify-content: center;
         }
 
+        .mainSix .inner2 .mainInnerSecond .mainSecond {
+            width: 35%;
+        }
+
+        .mainSix .inner .mainInnerSecond .mainSecond {
+            width: 35%;
+        }
+
+        .mainSix .inner1 .mainInnerSecond .mainSecond {
+            width: 35%;
+        }
+
         .sevenHeader .innerHeader {
             width: 100%;
         }
@@ -991,27 +1026,19 @@ input::placeholder {
         }
 
         .eightContainer  .inner1 {
-            margin: 0 auto;
-            gap: 7rem;
-            width: 37%;
-            margin-bottom: 50px;
+            gap: 6rem;           
         }
 
         .eightContainer  .inner {
-            width: 27%;
-            margin: 0 auto;
-            margin-bottom: 50px;
+            width: 20%;
         }
 
         .eightContainer  .inner2 {
-            width: 35%;
-            margin: 0 auto;
+            width: 25%;
         }
 
         .eightContainer {
             width: 100%;
-            flex-wrap: wrap;
-            display: block;
         }
 
 }
