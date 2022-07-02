@@ -896,10 +896,15 @@ input::placeholder {
         }
 
         .secondHeader {
-            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
         }
 
-        .secondHeader img {
+        .secondHeader .secondInnerHeader {
+            width: 60%;
+        }
+
+        .secondHeader .secondInnerHeader img {
             width: 100%;
             margin-bottom: 40px;
         }
