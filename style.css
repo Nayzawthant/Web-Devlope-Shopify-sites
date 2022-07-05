@@ -34,13 +34,9 @@
     justify-content: space-between;
 }
 
-.mobileMenu .frist h4 {
+.mobileMenu .frist h3 {
     font-size: 18px;
     color: #313131;
-}
-
-.mobileMenu .second {
-    margin: 10px 30px;
 }
 
 .mobileMenu .second a {
@@ -69,14 +65,82 @@
     transition: height 0.5s;
 }
 
-.mobileMenu .second a:hover::before {
-    height: 50px;
+
+
+.lastMenu {
+    width: 100%;
+    background: #F2F2F2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+.lastMenu .lastFirst {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.lastMenu .lastFirst h3 {
+    font-size: 38px;
+    color: #313131;
+}
+
+.lastMenu .lastSecond  {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lastMenu .lastSecond a {
+    width: 30%;
+    font-size: 18px;
+    color: #313131;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #c7f2ee;
+    border-radius: 8px;
+}
+
+.lastMenu .lastSecond a::before {
+    content: '';
+    width: 100%;
+    height: 0px;
+    background: linear-gradient(-105deg,#65b5f7, aqua);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: height 0.5s;
+}
+
+
+
+
+.lastMenu .lastSecond a:hover::before {
+    height: 46px;
     font-size: 18px;
 }
 
 .mobileMenu .second a:hover {
     color: #FFFFFF;
-    box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1), 0px 64.8148px 46.8519px rgba(49, 49, 49, 0.0759259), 0px 38.5185px 25.4815px rgba(49, 49, 49, 0.0607407), 0px 20px 13px rgba(49, 49, 49, 0.05), 0px 8.14815px 6.51852px rgba(49, 49, 49, 0.0392593), 0px 1.85185px 3.14815px rgba(49, 49, 49, 0.0240741);
+}
+
+.lastMenu .lastSecond a:hover {
+    padding: 10px 3px;
+    color: #FFFFFF;
+    box-shadow: 0px 10px 10px rgba(49, 49, 49, 0.1), 0px 64.8148px 46.8519px rgba(49, 49, 49, 0.0759259), 0px 38.5185px 25.4815px rgba(49, 49, 49, 0.0607407), 0px 20px 13px rgba(49, 49, 49, 0.05), 0px 8.14815px 6.51852px rgba(49, 49, 49, 0.0392593), 0px 1.85185px 3.14815px rgba(49, 49, 49, 0.0240741);
 }
 
 nav {
@@ -888,14 +952,23 @@ input::placeholder {
 
 }
 
-@media (max-width: 780px) {
+@media (max-width: 780px),
+        (max-width: 480px) {
+        .mainMobileMenu {
+            display: none;
+        }
+
+        .lastMenu {
+            width: 100%;
+            display: block;
+        }
 
         nav .nav-first {
             display: none;
         }
 
         nav .nav-second {
-            width: 100% !important;
+            width: 100%;
             position: relative;
             display: flex;
             justify-content: center;
@@ -903,45 +976,45 @@ input::placeholder {
 
         .nav-second h1 {
             font-weight: 800;
-            font-size: 28px ;
+            font-size: 48px ;
             line-height: 50px;
         }
 
         .nav-second .nav-header .shop {
             font-weight: 800;
-            font-size: 28px;
+            font-size: 48px;
             line-height: 50px;
             color: #49AD09;
         }
         
         .nav-second .nav-header .site {
             font-weight: 800;
-            font-size: 28px;
+            font-size: 48px;
             line-height: 50px;
         }
 
         .nav-second p {
-            font-size: 10px;
-            line-height: 80.9%;
+            font-size: 17px;
+            line-height: 120.9%;
             text-align: center;
         }
         
         .nav-second .button .contact{
-            width: 20%;
+            width: 22%;
             text-decoration: none;
             text-align: center;
-            font-size: 10px;
+            font-size: 12px;
             padding: 5px 8px;
             line-height: 15px;
         }
         
         .nav-second .button .watch {
-            width: 20%;
+            width: 23%;
             font-size: 10px;
         }
 
         .nav-second .button .watch a {
-            font-size: 10px;
+            font-size: 12px;
         }
 
         nav .nav-third {
@@ -955,13 +1028,12 @@ input::placeholder {
 
         .secondHeader .secondInnerHeader {
             width: 80%;
-            display: none;
+            
         }
 
         .secondHeader .secondInnerHeader img {
             width: 100%;
             margin-bottom: 40px;
-            display: none;
         }
 
         .thirdHeader .innerHeader {
@@ -987,6 +1059,14 @@ input::placeholder {
         .inner1 .innerImage {
             display: flex;
             justify-content: center;
+        }
+
+        .inner1 .innerImage img {
+            margin-right: 20px;
+        }
+
+        .inner .innerImage img {
+            margin-right: 20px;
         }
 
         .inner .innerImage {
@@ -1015,6 +1095,10 @@ input::placeholder {
             width: 100%;
         }
 
+        .fiveHeader .innerHeader h1 {
+            font-size: 39px;
+        }
+
         .mainFive  {
             display: block;
         
@@ -1022,6 +1106,10 @@ input::placeholder {
 
         .mainFive .innerFive {
             position: relative;
+        }
+
+        .mainFive .inner1 img {
+            width: 100%;
         }
 
         .mainFive .innerFive .inner {
@@ -1100,27 +1188,33 @@ input::placeholder {
         }
 
         .eightContainer  .inner1 {
-            width: 30%;
-            gap: 1rem; 
+            width: 100%;
             display: flex; 
-            justify-content: space-between;        
+            justify-content: space-around;
+            gap: 0;
+            margin-top: 30px;
         }
 
         .eightContainer  .inner1 .innerFirst {
             width: 40%;
+            text-align: center;
         }
 
         .eightContainer  .inner {
-            width: 20%;
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .eightContainer  .inner2 {
-            width: 25%;
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
         }
 
         .eightContainer {
             width: 100%;
-            gap: 2rem;
+            display: block;
         }
 
 
